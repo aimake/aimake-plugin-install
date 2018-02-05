@@ -26,10 +26,10 @@ export default {
       root: process.cwd(),
       pkgs: plugins.map(plugin => ({
         name: `aimake-plugin-${plugin}`,
-        version: 'latest'
+        version: 'latest',
       })),
       registry: 'http://registry.npmjs.com',
-      targetDir: pluginsDir
+      targetDir: pluginsDir,
     };
 
     if (options.registry) {
@@ -41,7 +41,7 @@ export default {
 
     const pluginStr = config.pkgs.map(pkg => pkg.name).join(' ');
 
-    console.log(`开始安装 ${chalk.yellow(pluginStr)} ...`);
+    console.log(`Start installing ${chalk.yellow(pluginStr)} ...`);
 
     // 开始安装
     co(function* install() {
@@ -49,5 +49,5 @@ export default {
     }).catch((err) => {
       console.log(err.stack);
     });
-  }
+  },
 };

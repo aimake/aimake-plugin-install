@@ -1,7 +1,7 @@
 {
   "name": "aimake-plugin-install",
-  "version": "0.0.1",
-  "main": "./lib/index.js",
+  "version": "0.0.2",
+  "main": "index.js",
   "description": "AiMake install plugin.",
   "license": "MIT",
   "engines": {
